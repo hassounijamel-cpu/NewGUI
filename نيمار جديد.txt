@@ -1,0 +1,10 @@
+local Orion = loadstring(game:HttpGet("https://raw.githubusercontent.com/hassounijamel-cpu/NewGUI/refs/heads/main/%D9%88%D8%A7%D8%AC%D9%87%20%D8%AC%D8%AF%D9%8A%D8%AF%D9%87.txt"))()
+local Window = Orion.MakeWindow({
+    Name = "سكربت NEYMAR |V2.4",
+    HidePremium = false,
+    SaveConfig = false,
+    ConfigFolder = nil,
+    IntroEnabled = true,
+    IntroText = "اهلا بك في سكربت نيمار",
+    IntroIcon = "rbxassetid://132785913693945"
+})
