@@ -8,3 +8,9 @@ local Window = Orion.MakeWindow({
     IntroText = "اهلا بك في سكربت نيمار",
     IntroIcon = "rbxassetid://132785913693945"
 })
+
+local MainTab = Window:MakeTab({
+    Name = "تجربه",
+    Icon = "rbxassetid://4483362457", -- تقدر تغيره أو تمسحه
+    PremiumOnly = false
+})
