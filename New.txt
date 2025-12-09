@@ -1,0 +1,55 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/youssefhesham542/Y2-Hub/main/interface2"))()
+
+MakeWindow({
+    Hub = {
+        Title = "Neymar Hub | Brookhaven RP",
+        Animation = "سكربت المطور Neymar Hub"
+    },
+    Key = {
+        KeySystem = false,
+        Title = "Key System",
+        Description = "",
+        KeyLink = "",
+        Keys = {"12924"},
+        Notifi = {
+            Notifications = true,
+            CorrectKey = "Running the Script...",
+            Incorrectkey = "The key is incorrect",
+            CopyKeyLink = "Copied to Clipboard"
+        }
+    }
+})
+
+
+local Main = MakeTab({Name = "الــمعلومات-"})
+AddDiscord(Main, {
+    DiscordLink = "https://t.me/ney_marr77 ",
+    DiscordIcon = "rbxassetid://73962170939481",
+    DiscordTitle = "  قناتي تليجرام "  })
+AddDiscord(Main, {
+    DiscordLink = "https://t.me/ney_marr77 ",
+    DiscordIcon = "rbxassetid://73962170939481",
+    DiscordTitle = "الگروب للسوالف",
+    })
+AddButton(Main, {
+  Name = "نسخ حسابي روبلوكس",
+  Callback = function()
+    setclipboard('Kdkjdnde')
+  end
+})
+
+
+AddButton(Main, {
+  Name = "نسخ حسابي تيك توك",
+  Callback = function()
+    setclipboard('ney_marr2')
+  end
+})
+
+
+AddButton(Main, {
+  Name = " نسخ حسابي روبلوكس الثاني ",
+  Callback = function()
+    setclipboard('hgw9t2bk')
+  end
+})
