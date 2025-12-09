@@ -53,3 +53,173 @@ AddButton(Main, {
     setclipboard('hgw9t2bk')
   end
 })
+
+local Main = MakeTab({Name = "تحديث LEGO"})
+
+AddSection(Main, {"اول سياره(الحمراء)"})
+
+AddButton(Main, {
+    Name = "اجمع القطع",
+    Callback = function()
+
+        local player = game.Players.LocalPlayer
+
+        -- وظيفة: تجيب أول Part داخل الموديل
+        local function GetFirstPart(model)
+            for _, item in ipairs(model:GetDescendants()) do
+                if item:IsA("BasePart") then
+                    return item
+                end
+            end
+            return nil
+        end
+
+        -- وظيفة: تنقل اللاعب على الـPart
+        local function TeleportTo(part)
+            local char = player.Character
+            if not char then return end
+
+            local hrp = char:FindFirstChild("HumanoidRootPart")
+            if not hrp then return end
+
+            hrp.CFrame = part.CFrame + Vector3.new(0, 5, 0)
+        end
+
+        -- الوظيفة الرئيسية
+        local folder = workspace:FindFirstChild("EggHunt_LegoFireTruck")
+        if not folder then
+            warn("❌ مجلد EggHunt_LegoFireTruck غير موجود")
+            return
+        end
+
+        for i = 1, 40 do
+            local model = folder:FindFirstChild("Brick" .. i)
+
+            if model then
+                local part = GetFirstPart(model)
+
+                if part then
+                    print("Teleport to Model Brick" .. i)
+                    TeleportTo(part)
+                    task.wait(3)
+                else
+                    print("⚠ الموديل Brick" .. i .. " ما يحتوي أي Part — تخطي")
+                end
+            else
+                print("⚠ الموديل Brick" .. i .. " غير موجود — تخطي")
+            end
+        end
+    end
+})
+
+AddSection(Main, {"ثاني سياره (الزرقاء)"})
+
+AddButton(Main, {
+    Name = "اجمع القطع",
+    Callback = function()
+
+        local player = game.Players.LocalPlayer
+
+        -- وظيفة: تجيب أول Part داخل الموديل
+        local function GetFirstPart(model)
+            for _, item in ipairs(model:GetDescendants()) do
+                if item:IsA("BasePart") then
+                    return item
+                end
+            end
+            return nil
+        end
+
+        -- وظيفة: تنقل اللاعب على الـPart
+        local function TeleportTo(part)
+            local char = player.Character
+            if not char then return end
+
+            local hrp = char:FindFirstChild("HumanoidRootPart")
+            if not hrp then return end
+
+            hrp.CFrame = part.CFrame + Vector3.new(0, 5, 0)
+        end
+
+        -- الوظيفة الرئيسية
+        local folder = workspace:FindFirstChild("EggHunt_LegoPoliceCar")
+        if not folder then
+            warn("❌ مجلد EggHunt_LegoPoliceCar غير موجود داخل workspace")
+            return
+        end
+
+        for i = 1, 53 do
+            local model = folder:FindFirstChild("Brick" .. i)
+
+            if model then
+                local part = GetFirstPart(model)
+
+                if part then
+                    print("Teleporting to Brick" .. i)
+                    TeleportTo(part)
+                    task.wait(3)
+                else
+                    print("⚠ الموديل Brick" .. i .. " ما يحتوي أي Part – تخطي")
+                end
+            else
+                print("⚠ الموديل Brick" .. i .. " غير موجود – تخطي")
+            end
+        end
+    end
+})
+
+AddSection(Main, {"ثالث سياره(الصفراء)"})
+
+AddButton(Main, {
+    Name = "اجمع القطع",
+    Callback = function()
+
+        local player = game.Players.LocalPlayer
+
+        -- يجيب أول Part داخل الموديل
+        local function GetFirstPart(model)
+            for _, item in ipairs(model:GetDescendants()) do
+                if item:IsA("BasePart") then
+                    return item
+                end
+            end
+            return nil
+        end
+
+        -- ينقل اللاعب على الـPart
+        local function TeleportTo(part)
+            local char = player.Character
+            if not char then return end
+
+            local hrp = char:FindFirstChild("HumanoidRootPart")
+            if not hrp then return end
+
+            hrp.CFrame = part.CFrame + Vector3.new(0, 5, 0)
+        end
+
+        -- الرئيسية
+        local folder = workspace:FindFirstChild("EggHunt_LegoExcavator")
+        if not folder then
+            warn("❌ مجلد EggHunt_LegoExcavator غير موجود داخل workspace")
+            return
+        end
+
+        for i = 1, 55 do
+            local model = folder:FindFirstChild("Brick" .. i)
+
+            if model then
+                local part = GetFirstPart(model)
+
+                if part then
+                    print("Teleporting to Brick" .. i)
+                    TeleportTo(part)
+                    task.wait(3)
+                else
+                    print("⚠ Brick" .. i .. " موجود لكن ما بي أي Part — تخطي")
+                end
+            else
+                print("⚠ Brick" .. i .. " غير موجود — تخطي")
+            end
+        end
+    end
+})
