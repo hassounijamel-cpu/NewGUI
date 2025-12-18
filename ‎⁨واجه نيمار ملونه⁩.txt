@@ -213,7 +213,7 @@ end
 
 function MakeWindow(Configs)
   local title = Configs.Hub.Title or "REDz HUB"
-  local Anim_Title = Configs.Hub.Animation or "by : redz9999"
+  local Anim_Title = Configs.Hub.Animation or "by : neymar"
   
   local KeySystem = Configs.Key.KeySystem or false
   local KeyTitle = Configs.Key.Title or "Key System"
@@ -349,7 +349,28 @@ function MakeWindow(Configs)
   end
   
   local Menu = Create("Frame", ScreenGui, {
-    BackgroundColor3 = Configs_HUB.Cor_Hub,
+    local Menu = Create("Frame", ScreenGui, {
+    BackgroundTransparency = 1, -- حتى تبين الصورة
+    Position = UDim2.new(0.5, -500/2, 0.5, -270/2),
+    Active = true,
+    Draggable = true
+})
+
+Corner(Menu)
+Stroke(Menu)
+
+-- 🔹 خلفية الواجهة (الصورة تحت كل شي)
+local BackgroundImage = Instance.new("ImageLabel")
+BackgroundImage.Name = "BackgroundImage"
+BackgroundImage.Parent = Menu
+BackgroundImage.Size = UDim2.new(1, 0, 1, 0)
+BackgroundImage.Position = UDim2.new(0, 0, 0, 0)
+
+BackgroundImage.Image = "rbxassetid://114721467311842" -- 🔴 حط ID الصورة هنا
+BackgroundImage.BackgroundTransparency = 1
+BackgroundImage.ImageTransparency = 0.25 -- تقدر تغيّره أو تحذفه
+BackgroundImage.ScaleType = Enum.ScaleType.Crop
+BackgroundImage.ZIndex = 0
     Position = UDim2.new(0.5, -500/2, 0.5, -270/2),
     Active = true,
     Draggable = true
